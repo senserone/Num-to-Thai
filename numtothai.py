@@ -45,7 +45,8 @@ try:
     x = float(num)
     if(len(num.split('.')) > 1):
         parts = num.split('.')
-        print(readNumber(parts[0]),end='บาท')
+        if(int(parts[0]) > 0):
+            print(readNumber(parts[0]),end='บาท')
         if(int(parts[1][:2]) > 0):
             print(readNumber(parts[1][:2]),end='สตางค์')
         else:
